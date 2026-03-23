@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Drug Interaction Advisor</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <header>
+        <h1 class="main-logo">Smart Drug Interaction Advisor</h1>
+        <p>Your AI-powered companion for safe medication use</p>
+    </header>
+
+    <!-- Input Section -->
+    <div class="input-group">
+        <input type="text" id="drugInput" placeholder="Enter medication name..." />
+        <button class="btn-add" onclick="addDrug()">Add</button>
+    </div>
+
+    <div id="errorMsg" class="error-msg"></div>
+
+    <!-- Drug List -->
+    <div id="drugList" class="drug-list">
+        <div id="emptyState" class="empty-state">No medications added yet.</div>
+    </div>
+
+    <!-- Check Button -->
+    <button id="checkBtn" class="btn-check" onclick="checkInteractions()">
+        <span id="btnText">Check Interactions</span>
+        <span id="loadingSpinner" class="spinner"></span>
+    </button>
+
+    <!-- Result Card -->
+    <div id="resultCard" class="result-card">
+
+        <div class="result-header">
+            <span>Interaction Result</span>
+            <span id="severityBadge" class="severity-badge">HIGH</span>
+        </div>
+
+        <div class="result-body">
+            <p id="simpleExplanation" class="simple-text"></p>
+            <p id="techExplanation" class="tech-text"></p>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
